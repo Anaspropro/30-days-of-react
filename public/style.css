@@ -1,0 +1,44 @@
+header{
+    background-color: #61DBFB;
+    font-family: Helvetica, sans-serif, monospace;
+    padding: 25;
+    line-height: 1.5;
+}
+footer{
+    background-color: #61DBFB;
+}
+.bodySub{
+    border-radius: 20px;
+    font: 1em sans-serif;
+    text-align: center;
+    background-color: #61DBFB;
+}
+.txt{
+    margin: 20px;
+    font-family: Helvetica, sans-serif;
+}
+input{
+    width: 17 rem;
+    height: 25px;
+    margin: 10px;
+    border: 0;
+    border-radius: 5px;
+}
+button{
+    width: 8rem;
+    height: 2.5rem;
+    border: 0;
+    color: white;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgb(194, 94, 94) !important;
+}
+button :hover{
+    width: 9rem;
+    height: 3rem;
+    border: 0;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgb(255, 6, 6) !important;
+}
+

@@ -84,10 +84,26 @@ const sub = (
             <input type="email" name="e-mail" placeholder='e-mail' id="" />
         </div>
         <div>
-            <button>Subscribe</button>
+            <button type="submit">Subscribe</button>
         </div>
     </div>
 )
+
+/*________________ React Component _________________*/
+class Parent {
+    constructor (firstName, lastName, country, title) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.country = country
+        this.title = title
+    }
+    getPersonInfo(){
+        return `${this.firstName} ${this.lastName}, a ${this.title} developer based in ${this.country}`
+    }
+
+}
+
+
 
 const app = (
     <div className='app'>
@@ -95,6 +111,7 @@ const app = (
         {main}
         {sub}
         {footer}
+        {Parent}
     </div>
 )
 

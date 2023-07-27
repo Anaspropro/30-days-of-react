@@ -29,6 +29,9 @@ const personAge = (
     </p>
 )
 
+const TechList = () => {
+    
+}
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 
@@ -73,51 +76,12 @@ const Footer = () => (
     </footer>
 )
 
-/*________________ React Component _________________*/
-class Parent {
-    constructor (firstName, lastName, country, title) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.country = country
-        this.title = title
-    }
-    getPersonInfo(){
-        return `${this.firstName} ${this.lastName}, a ${this.title} developer based in ${this.country}`
-    }
-    parentMethod(){
-        // code goes here
-    }
-}
-
-/* const p1 = new Parent('Ayomide', 'Aliu', 'South Korea', 'Data Science');
-
-class Child extends Parent {
-    constructor(firstName, lastName, country, title, skills){
-        super(firstName, lastName, country, title)
-        this.skills = skills
-    }
-    getSkills(){
-        let len = this.skills.length
-        return len > 0 ? this.skills.join(' ') : 'No skills found'
-    }
-    childMethod(){
-
-    }
-}
-const skills = ['HTML', 'CSS', 'JS', 'React.Js', 'Bootstrap'];
-
-const child = new Child(
-    p1,
-    skills
-) */
-
 const App = () => (
     <div className='app'>
         <Header />
         <Main />
         <Sub />
-        <Footer />
-        <Parent />       
+        <Footer />      
     </div>
 )
 

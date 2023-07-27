@@ -1,17 +1,29 @@
+body{
+    background-color: #b0d6f0;
+}
 header{
     background-color: #61DBFB;
     font-family: Helvetica, sans-serif, monospace;
     padding: 25;
     line-height: 1.5;
+    border-radius: 20px;
 }
 footer{
     background-color: #61DBFB;
+    text-align: center;
 }
-.bodySub{
+.header-wrapper{
+    margin: 15px;
+}
+.main-wrapper{
+    margin: 15px;
+}
+.body-sub{
     border-radius: 20px;
     font: 1em sans-serif;
     text-align: center;
-    background-color: #61DBFB;
+    background-color: #61DBFB;    
+    font-size: 20px;
 }
 .txt{
     margin: 20px;

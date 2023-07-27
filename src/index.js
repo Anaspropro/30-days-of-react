@@ -1,25 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-
-const welcome = 'Welcome to 30 days of React'
-const title = 'Getting Started React'
-const subtitle = 'JavaSript Library'
 const author = {
     firstname: 'Anas',
     lastName: 'Aliu',
 }
-const date = '14th July, 2023'
 
-const header = (
+// Header Component
+const Header = () => (
     <header>
         <div className='header-wrapper'>
-            <h1>{welcome}</h1>
-            <h2>{title}</h2>
-            <h3>{subtitle}</h3>
-            <p>Instructor: {author.firstname} {author.lastName}</p>
-            <small>Date: {date}</small>
+            <h1>Welcome to 30 days of React</h1>
+            <h2>Getting Started React</h2>
+            <h3>JavaSript Library</h3>
+            <p>Anas Aliu</p>
+            <small>14th July, 2023</small>
         </div>
     </header>
 )
@@ -34,11 +29,11 @@ const personAge = (
     </p>
 )
 
-
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 
-const main = (
+// Main Component
+const Main = () => (
     <main>
         <div className='main-wrapper'>
             <p>
@@ -54,30 +49,10 @@ const main = (
     </main>
 )
 
-const copyRight = 'Copyright 2020.'
-
-const footer = (
-    <footer>
-        <div className='footer-wrapper'>
-            <p>
-                {copyRight}
-            </p>
-        </div>
-    </footer>
-)
-
-const textStyle = {
-    textAlign: 'center',
-    fontSize: "20px",
-    margin: "20px",
-}
-
-const sub = (
-    <div class='bodySub'>
-        <div style={textStyle} class='txt'><h1>SUBCRIBE</h1></div>
-        
+const Sub =  () => (
+    <div className='body-sub'>
+        <div ><h1>SUBCRIBE</h1></div>        
         <p>Sign up with your email address to recieve news and update</p>
-
         <div>
             <input type="text" name="firstname" placeholder='firstname' id="" />
             <input type="text" name="lastname" placeholder='lastname' id="" />
@@ -87,6 +62,15 @@ const sub = (
             <button type="submit">Subscribe</button>
         </div>
     </div>
+)
+
+// footer component
+const Footer = () => (
+    <footer>
+        <div className='footer-wrapper'>
+            <p>Copyright 2020</p>
+        </div>
+    </footer>
 )
 
 /*________________ React Component _________________*/
@@ -100,21 +84,43 @@ class Parent {
     getPersonInfo(){
         return `${this.firstName} ${this.lastName}, a ${this.title} developer based in ${this.country}`
     }
-
+    parentMethod(){
+        // code goes here
+    }
 }
 
+/* const p1 = new Parent('Ayomide', 'Aliu', 'South Korea', 'Data Science');
 
+class Child extends Parent {
+    constructor(firstName, lastName, country, title, skills){
+        super(firstName, lastName, country, title)
+        this.skills = skills
+    }
+    getSkills(){
+        let len = this.skills.length
+        return len > 0 ? this.skills.join(' ') : 'No skills found'
+    }
+    childMethod(){
 
-const app = (
+    }
+}
+const skills = ['HTML', 'CSS', 'JS', 'React.Js', 'Bootstrap'];
+
+const child = new Child(
+    p1,
+    skills
+) */
+
+const App = () => (
     <div className='app'>
-        {header}
-        {main}
-        {sub}
-        {footer}
-        {Parent}
+        <Header />
+        <Main />
+        <Sub />
+        <Footer />
+        <Parent />       
     </div>
 )
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById('root');
 
-ReactDOM.render(app, rootElement)
+ReactDOM.render(<App />, rootElement);

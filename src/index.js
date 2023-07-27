@@ -29,9 +29,6 @@ const personAge = (
     </p>
 )
 
-const TechList = () => {
-    
-}
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 

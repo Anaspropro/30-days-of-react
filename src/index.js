@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import anasImage from './images/anas.jpg'
 
-const author = {
-    firstname: 'Anas',
-    lastName: 'Aliu',
-}
 
 // Header Component
 const Header = () => (
@@ -19,14 +16,12 @@ const Header = () => (
     </header>
 )
 
-const yearBorn = 2000
-const currentYear = new Date().getFullYear()
-const age = currentYear - yearBorn
-const personAge = (
-    <p>
-        {' '}
-        {author.firstname} {author.lastName} is {age} years Old
-    </p>
+// User card component
+const UserCard = () => (
+    <div className='user-card'>
+        <img src={anasImage} alt=" anas " />
+        <h2>Anas Aliu </h2>
+    </div>
 )
 
 const techs = ['HTML', 'CSS', 'JavaScript']
@@ -44,7 +39,7 @@ const Main = () => (
                 :
             </p>
             <ul>{techsFormatted}</ul>
-            {personAge}
+            <ul><UserCard /></ul>
         </div>
     </main>
 )
@@ -78,7 +73,7 @@ const App = () => (
         <Header />
         <Main />
         <Sub />
-        <Footer />      
+        <Footer />  
     </div>
 )
 

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import anasImage from './images/anas.jpg'
 
-
 // Header Component
 const Header = () => (
     <header>
@@ -78,5 +77,4 @@ const App = () => (
 )
 
 const rootElement = document.getElementById('root');
-
 ReactDOM.render(<App />, rootElement);
